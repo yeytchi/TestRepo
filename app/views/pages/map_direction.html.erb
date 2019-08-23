@@ -1,0 +1,27 @@
+<h1>Pages#Map_direction</h1>
+<p>Find me in app/views/pages/map_direction.html.erb</p>
+
+<!-- <input type="search" id="address-input" placeholder="Where are we going?" />
+
+<script src="https://cdn.jsdelivr.net/npm/places.js@1.16.4"></script>
+<script>
+  var placesAutocomplete = places({
+    appId: 'YOUR_PLACES_APP_ID',
+    apiKey: 'YOUR_PLACES_API_KEY',
+    container: document.querySelector('#address-input')
+  });
+</script> -->
+
+
+<form>
+  <select name="Monuments">
+    <% @monuments.each do |monument| %>
+      <option value="<%= monument.longitude %>,<%= monument.latitude %>">
+        <%= monument.name %>
+      </option>
+    <% end %>
+  </select>
+  <input type="submit" name="find way">
+</form>
+<div id='map'></div>
+

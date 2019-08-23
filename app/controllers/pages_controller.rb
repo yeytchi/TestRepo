@@ -3,4 +3,8 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def map_direction
+    @monuments = Monument.all
+  end
 end

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @monuments.each do |monument| %>
+      <tr>
+        <td><%= monument.name %></td>
+        <td><%= monument.address %></td>
+        <td><%= link_to 'Show', monument %></td>
+        <td><%= link_to 'Edit', edit_monument_path(monument) %></td>
+        <td><%= link_to 'Destroy', monument, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Monument', new_monument_path %>
+
+<form id="fetch">
+  <input type="text" name="name" id="search-input" required>
+  <input type="submit" value="Search">
+</form>
+
+<div
+  id="map"
+  style="width: 60%;
+  height: 300px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
