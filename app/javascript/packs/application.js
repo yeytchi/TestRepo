@@ -136,7 +136,7 @@ map.on('load', function() {
 
 
 
-// Test on select change
+// Test on select change on form
 const selection = document.querySelector('select');
 selection.addEventListener('change', (e) => {
   const monument = document.querySelector('select').value;
