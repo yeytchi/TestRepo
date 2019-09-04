@@ -3,9 +3,34 @@
   flex-direction: column;
   align-items: center;
 
-  .videogames-list {
+  #videogames-list {
+    width: 100vw;
     margin: 10px;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
+  }
+
+  a {
+    background-color: lightgrey;
+    width: 100%;
+    margin: 5px;
+
+    .videogame {
+      height: 60px;
+      width: 350px;
+
+      .videogames-title {
+        display: flex;
+
+        img {
+          height: 60px;
+          width: 60px;
+        }
+      }
+    }
+
+    .description {
+      background-color: grey;
+    }
   }
 }

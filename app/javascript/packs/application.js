@@ -1,10 +1,10 @@
 import "bootstrap";
 import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
-import  { giantBomb } from './giant_bomb';
+import  { homeSearch } from './giant_bomb';
 
 import { initMapbox } from '../plugins/init_mapbox';
 
-giantBomb();
+homeSearch();
 
 mapboxgl.accessToken = 'pk.eyJ1IjoieWV5dGNoaSIsImEiOiJjanlvOGQ2N3kweXdlM2Rub2o3dmI4ZDU1In0.WBwFFzjBi4OlcAtg9q91yw';
 // added manualy
